@@ -35,16 +35,18 @@ target_link_libraries( cmake_examples_inst_bin
 # Install
 ############################################################
 
+# 设置install输出路径
+set(CMAKE_INSTALL_PREFIX "D:/cmake_output")
+
 # Binaries
 install (TARGETS cmake_examples_inst_bin
     DESTINATION bin)
 
 # Library
-# Note: may not work on windows
 install (TARGETS cmake_examples_inst
     LIBRARY DESTINATION lib)
 
-# Header files
+# Header files(将目录下的所有头文件文件夹全部拷贝)
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ 
     DESTINATION include)
 

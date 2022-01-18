@@ -12,7 +12,7 @@ set(SOURCES
     src/main.cpp
 )
 
-# Add an executable with the above sources
+# 生成项目可执行文件，可以添加头文件(不是路径)和源文件
 add_executable(hello_headers ${SOURCES})
 
 # Set the directories that should be included in the build command for this target
@@ -21,3 +21,9 @@ target_include_directories(hello_headers
     PRIVATE 
         ${PROJECT_SOURCE_DIR}/include
 )
+
+# CMake-Public-Private-Interface
+# https://leimao.github.io/blog/CMake-Public-Private-Interface/
+# 当前模块自己的头文件用PRIVATE，引用其他模块的头文件使用INTERFACE, 图省事就直接PUBLIC
+
+

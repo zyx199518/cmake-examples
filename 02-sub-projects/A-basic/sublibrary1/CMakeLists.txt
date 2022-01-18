@@ -1,5 +1,5 @@
 # 设置当前文件的 PROJECT_NAME 为 sublibrary1，后续直接使用变量PROJECT_NAME即可
-project (sublibrary1)
+project (sublibrary1000)
 
 # 创建库文件，这里只需要添加源文件即可
 add_library(${PROJECT_NAME} src/sublib1.cpp)
